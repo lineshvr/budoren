@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BudORen</title>
+  <meta charset="utf-8">
+	<script type="text/javascript" src="js/loginvalidation.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script type="text/javascript" src="js/respond.min.js"></script>
+
+<!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+	<style type="text/css">
+		.bg{ behavior: url(js/PIE.htc); }
+	.auto-style1 {
+		color: #8606C5;
+	}
+	.auto-style2 {
+		margin-left: 181px;
+	}
+	</style>
+  <![endif]-->
+	<!--[if lt IE 7]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<br>
+			<br>&nbsp;</div>
+	<![endif]-->
+
+</head>
+
+  <body>
+    <br />
+  <table style="width: 100%">
+	  <tr>
+			<td style="width: 40%">&nbsp;</td>
+			<td class="text-center" style="width: 10%"><a href="kinoregistartion.php">Home</a></td>
+			<td style="width: 5%"><a href="kinonavn.php">Kinoliste</a></td>
+			<td style="width: 9%"><a href="orderform.php">Bestillingsskjema</a></td>
+			<td style="width: 9%"><a href="customermessages.php">Kundemeldinger</a></td>
+			<td style="width: 9%"><a href="customermorderdhistory.php">bestillelogg kunder</a></td>
+	<!--		<td style="width: 6%"><a href="brukeredit.php">brukerprofil</a></td>
+<!--			<td style="width: 10%"><a href="kino_registration.php">Kino tillegg</a></td>-->
+			<td style="width: 7%"><a href="filmregistration.php">filmer tillegg</a></td>
+			<td style="width: 7%"><a href="brukerreg.php">Bruker tillegg</a></td>
+<!--	       <td style="width: 10%"><a href="customerregistration.html">Kundertillegg</a></td>-->
+			<td style="width: 4%"><a href="logout.php">logg ut</a></td>
+
+			<td style="width: 10%">&nbsp;</td>
+
+	   </tr>
+  </table>
+  <br />
+  <table style="width: 100%">
+	  <tr>
+		  <td>&nbsp;</td>
+		  <td style="width: 196px">&nbsp;</td>
+		  <td>
+		  <img alt="" class="auto-style2" height="108" src="pic/sample_red.png" width="240">&nbsp;</td>
+		  <td>&nbsp;</td>
+	  </tr>
+  </table>
+  <br /><br />
+<table style="width: 100%">
+<tr>
+<td style="width: 29%;">&nbsp;</td>
+<td><div id="header" class="auto-style3">
+	<h2 style="margin-bottom: 0pt; height: 3%; width: 636px;" class="text-center">Ny Kino Registrering</h2>
+</div>
+</td>
+
+	
+	<td>&nbsp;</td>
+
+
+</tr>
+
+</table>
+<br /><br />
+			<form action="kinoregistration.php" method=post autocomplete="on" onsubmit="return checkForm(this);">
+<fieldset>
+<table style="width: 100%">
+	<tr>
+		<td style="width: 29%; height: 24px;"> </td>
+		<td style="width: 18%; height: 24px;" class="text-right">Kino Navn </td>
+		<td style="height: 24px; width: 448px">
+		<input id="kino" name="kino" size="20" maxlength="30"  type="text" value=""  required tabindex="1" /></td>
+		<td style="height: 24px">
+		&nbsp;</td>
+	</tr>
+		<tr>
+		<td style="width: 29%"> &nbsp;</td>
+		<td style="width: 18%" class="text-right">kino adress</td>
+		<td style="width: 448px"><input id="kino_address" name="kino_address" size="40" maxlength="40"  type="text" value=""  required /></td>
+		<td>&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td style="width: 29%"> &nbsp;</td>
+		<td style="width: 18%" class="text-right"><span lang="no-bok">P</span>ost<span lang="no-bok">Nummer</span> </td>
+		<td style="width: 448px"><input id="kino_postnumber" name="kino_postnumber" size="20" maxlength="20"  type="text" value=""  required /></td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td style="width: 29%"> &nbsp;</td>
+		<td style="width: 18%" class="text-right"> Sted</td>
+		<td style="width: 448px"><input id="kino_city" name="kino_city" size="20" maxlength="20"  type="text" value=""  required /></td>
+		<td>&nbsp;</td>
+	</tr>
+
+
+	
+	<tr>
+		<td style="width: 29%"> &nbsp;</td>
+		<td style="width: 18%" class="text-right"> E-post</td>
+		<td style="width: 448px"><input id="kino_emailid" name="kino_emailid" size="30" maxlength="30"  type="email" value=""  required  placeholder="E-postadresse" /></td>
+		<td>&nbsp;</td>
+	</tr>
+
+	
+
+	<tr>
+		<td style="width: 29%"> &nbsp;</td>
+		<td style="width: 18%" class="text-right"> <div class="auto-style1">
+			</div></td>
+					<td style="width: 448px">
+			<input name="submit" type="submit" value="Registrer">&nbsp;&nbsp;&nbsp;&nbsp;
+		<input name="Reset" type="reset" value="Reset"></td>
+					<td>
+					&nbsp;</td>
+	</tr>
+
+</table>
+</fieldset>
+</form>
+
+<script type="text/javascript"> Cufon.now(); </script>	
+
+
+
+</body>
+</html>

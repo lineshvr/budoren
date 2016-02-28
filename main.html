@@ -1,0 +1,57 @@
+﻿
+
+    <?php
+    //Start session
+    session_start();
+     
+    //Check whether the session variable SESS_MEMBER_ID is present or not
+    if(!isset($_SESSION['sess_firstname']) || (trim($_SESSION['sess_lastname']) == '')) {
+    header("location: loginn.html");
+    exit();
+    }
+    ?>
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+			<title>budoren</title>
+			<meta charset="utf-8">
+			<script type="text/javascript" src="js/loginvalidation.js"></script>
+			<script type="text/javascript" src="js/formvalidation.js"></script>
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="style.css">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<script type="text/javascript" src="js/respond.min.js"></script>
+    </head>
+     
+    <body>
+    <header id="header">
+		<div class="navbar navbar-fixed-top" id="navbar">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><span lang="no-bok">BUDOREN</span></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right" id="insidepagenav">
+				<ul class="nav navbar-nav navbar-right" id="insidepagenav">
+				<li class="active"><a href="#header">Home</a></li>
+				<li><a href="kinoregistration.html">Kino</a></li>
+				<li><a href="filmregistration.php">Film</a></li>				    
+				<li><a href="brukerreg.php">Bruker</a></li>
+				<li><a href="customerregistration.html">Kunder</a></li>
+				<li><a href="admin.html">Admin</a></li>
+	          </ul>
+	        </div><!--/.navbar-collapse -->
+	      </div>
+	    </div>
+	</header> <!-- /#header -->
+
+    <h1>Welcome, <?php echo $_SESSION["sess_firstname"] ?></h1>
+    </body>
+    </html>
